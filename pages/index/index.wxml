@@ -1,0 +1,44 @@
+<view class="container">
+  <view class="place-list">
+    <block wx:for="{{places}}" wx:key="id">
+      <view class="place-card">
+        <!-- 店铺封面图 -->
+        <image class="place-card__cover" src="{{item.coverUrl}}" mode="aspectFill"></image>
+        
+        <view class="place-card__content">
+          <!-- 店名与标签 -->
+          <view class="place-card__header">
+            <text class="place-card__name">{{item.name}}</text>
+            <view class="place-card__badge {{item.type === 'seed' ? 'place-card__badge--seed' : 'place-card__badge--avoid'}}">
+              {{item.type === 'seed' ? '种草' : '避雷'}}
+            </view>
+          </view>
+          
+          <!-- 评分 -->
+          <view class="place-card__rating">
+            <text wx:for="{{5}}" wx:for-item="star" wx:key="*this" class="star {{index < item.rating ? 'star--active' : ''}}">★</text>
+          </view>
+
+          <!-- 好友评价 -->
+          <view class="place-card__comment">
+            <text class="place-card__author">{{item.author}}：</text>
+            <text>{{item.comment}}</text>
+          </view>
+          
+          <!-- 操作区 -->
+          <view class="place-card__footer">
+            <button 
+              class="btn-want-to-go" 
+              hover-class="btn-hover" 
+              bindtap="onWantToGo" 
+              data-id="{{item.id}}" 
+              data-name="{{item.name}}"
+            >
+              我也想去
+            </button>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

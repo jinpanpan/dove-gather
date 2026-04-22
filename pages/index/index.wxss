@@ -1,0 +1,117 @@
+.container {
+  padding: 20rpx;
+  background-color: #F5F5F5;
+  min-height: 100vh;
+}
+
+.place-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30rpx;
+}
+
+.place-card {
+  background-color: #FFFFFF;
+  border-radius: 20rpx;
+  overflow: hidden;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.place-card__cover {
+  width: 100%;
+  height: 360rpx;
+  background-color: #EEEEEE;
+}
+
+.place-card__content {
+  padding: 24rpx;
+}
+
+.place-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12rpx;
+}
+
+.place-card__name {
+  font-size: 34rpx;
+  font-weight: bold;
+  color: #333333;
+}
+
+.place-card__badge {
+  font-size: 22rpx;
+  padding: 4rpx 12rpx;
+  border-radius: 6rpx;
+  font-weight: 500;
+}
+
+.place-card__badge--seed {
+  background-color: #FFF0E6;
+  color: #FF8C00; /* 主色：活力橙 */
+}
+
+.place-card__badge--avoid {
+  background-color: #F2F2F2;
+  color: #666666;
+}
+
+.place-card__rating {
+  margin-bottom: 16rpx;
+}
+
+.star {
+  font-size: 24rpx;
+  color: #DDDDDD;
+  margin-right: 4rpx;
+}
+
+.star--active {
+  color: #FF8C00;
+}
+
+.place-card__comment {
+  font-size: 28rpx;
+  color: #666666;
+  line-height: 1.6;
+  margin-bottom: 24rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.place-card__author {
+  color: #333333;
+  font-weight: 500;
+}
+
+.place-card__footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-want-to-go {
+  margin: 0;
+  padding: 0 32rpx;
+  height: 64rpx;
+  line-height: 64rpx;
+  background-color: #FF8C00;
+  color: #FFFFFF;
+  font-size: 26rpx;
+  border-radius: 32rpx;
+  border: none;
+}
+
+.btn-want-to-go::after {
+  border: none;
+}
+
+.btn-hover {
+  opacity: 0.8;
+  transform: scale(0.98);
+}
